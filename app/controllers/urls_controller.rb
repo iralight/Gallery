@@ -14,11 +14,9 @@ class UrlsController < ApplicationController
   	# Get a Nokogiri::HTML::Document for the page we’re interested in...
 	  doc = Nokogiri::HTML(@result)
 
-    @links = doc.css('img')
-   
- 	# find all the pins
- 	  #pin_identifier = '//img[@class="pinImg"]' 
-	  #@link = doc.xpath(pin_identifier)
+    #@links = doc.css('img[class="pinImg"]')
+    @links = doc.css('img[class^="pinImg"]')
+
   end
 end
 

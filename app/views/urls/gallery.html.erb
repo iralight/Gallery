@@ -1,1 +1,6 @@
-<%=@result.inspect%>
+<%=@links.length%>
+<% @links.each do |link| %>
+	<%=link.attributes['class'].inspect%>
+	<br/><br/>
+<% end %>
+

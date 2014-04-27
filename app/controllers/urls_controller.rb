@@ -11,10 +11,14 @@ class UrlsController < ApplicationController
   	@result = Net::HTTP.get(uri)
   	#puts @result
 
-  	# find <div class="hoverMask"> that contains the pins
   	# Get a Nokogiri::HTML::Document for the page we’re interested in...
-	@doc = Nokogiri::HTML(@result)
-	
+	  doc = Nokogiri::HTML(@result)
 
+    @links = doc.css('img')
+   
+ 	# find all the pins
+ 	  #pin_identifier = '//img[@class="pinImg"]' 
+	  #@link = doc.xpath(pin_identifier)
   end
 end
+

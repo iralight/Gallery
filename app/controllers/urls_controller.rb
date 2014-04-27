@@ -21,9 +21,9 @@ class UrlsController < ApplicationController
     @pins = []
 
     @links.each do |link| 
-      @pin = []
-      @pin.push link.attr('src')
-      @pin.push link.attr('alt')
+      @pin = {}
+      @pin[:src]=link.attr('src')
+      @pin[:alt]=link.attr('alt')
       @pins.push @pin
     end
 

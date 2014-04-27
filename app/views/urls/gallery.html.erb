@@ -1,8 +1,5 @@
-<%=@links.length%>
-<% @links.each do |link| %>
-	<%link.attributes.each do |attribute|%>
-		<%=attribute.inspect%>
-	<% end %>
+<% @pins.each do |pin| %>
+	<%=pin.inspect%>
 	<br/><br/>
 <% end %>
 

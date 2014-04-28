@@ -9,6 +9,8 @@
 	height: 150px;
 	background-color: #d3212b;
 	position: absolute;
+	top: 0px;
+	left: 0px;
 }
 
 #logo{
@@ -24,7 +26,7 @@
 	font-size: 12px;
 	text-align: center;
 	font-weight: bold;
-	line-height: 2px;
+	line-height: 0px;
 	display: inline-block;
 	background-color: #FFFFFF;
 	color: #d3212b;
@@ -32,7 +34,30 @@
 	height: 25px;
 	border-radius: 5px;
 	vertical-align: text-middle;
-	}
+}
+
+.navigation:active {
+  background: #ffffff;
+  display: block;
+  height: 25px;
+  width: 100px;
+  color: #d3212b;
+  font-weight: bold;
+  vertical-align: text-middle;
+  text-align: center;
+  line-height: 2px;
+  position: absolute;
+  border-radius: 4px;
+  box-shadow:inset 1px 1px 1px 1px #4c4c4c;
+  -webkit-box-shadow: inset 1px 1px 1px 1px #4c4c4c;
+    -moz-box-shadow: inset 1px 1px 1px 1px #4c4c4c;
+}
+
+.navigation:hover {
+	color: black;
+}
+
+
 
 #nav1{
 	position: absolute;
@@ -81,6 +106,7 @@ h1{
 	font-color: black;
 	font-size: 18pt;
 	font-weight: bold;
+	color: #d3212b;
 }
 
 #mainheading {
@@ -134,6 +160,10 @@ p{
     -moz-box-shadow: inset 1px 1px 1px 1px #4c4c4c;
 }
 
+.button:hover {
+	color: black;
+}
+
  a.button{
   text-decoration: none;
  }
@@ -145,6 +175,37 @@ p{
 	width: 500px;
 	left: 250px;
 }
+
+#pinteresturl{
+
+	width: 500px;
+	height: 25px;
+	top: 340px;
+	left: 250px;
+	position: absolute;
+}
+
+#code{
+	position: absolute;
+	top: 15px;
+	left:550px;
+}
+
+#account{
+	position: absolute;
+	top: 535px;
+	left: 250px;
+	width: 125px;
+}
+
+#desc2{
+	position: absolute;
+	top: 550px;
+	left: 250px;
+	width: 1000px;
+
+}
+
 
 
 

@@ -4,11 +4,12 @@
 
 class UrlsController < ApplicationController
   def gallery
-
-  	sample_pinboard = 'http://www.pinterest.com/iralight83/accessories/'
+    sample_pinboard = 'http://www.pinterest.com/iralight83/accessories/'
   	# get the url we are interested in
   	uri = URI(sample_pinboard)
   	@result = Net::HTTP.get(uri)
+
+    #puts @result.inspect
 
   	# Get a Nokogiri::HTML::Document for the page we’re interested in...
 	  doc = Nokogiri::HTML(@result)
@@ -26,7 +27,15 @@ class UrlsController < ApplicationController
       @pin[:alt]=link.attr('alt')
       @pins.push @pin
     end
-
+    @pins
   end
+
+  def follow
+    @pins = gallery
+    respond_to do |format|
+      format.js
+    end
+  end
+
 end
 

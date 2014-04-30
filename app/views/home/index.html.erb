@@ -2,6 +2,7 @@
 <head>
 <%= stylesheet_link_tag "home" %>
 <body>
+
 <div id = "header">
 	<div id = "rectangle">
 		<img id="logo" src="assets/logo.png">
@@ -18,6 +19,7 @@
 </div>
 <div class="steps">
  <h1 id="mainheading"> Welcome! Follow the steps below to generate an embed code for your Pinterest gallery! </h1>
+ 	<div contenteteditable="true" id="embed_code"></div>
 	<div id="step1">
 		<img id="number1" src="assets/step1.png">
 		<div id="step1button" class="button">
@@ -27,10 +29,10 @@
 	</div>
 	<div id="step2">
 		<img id="number2" src="assets/step2.png">
-		<form id="pinteresturl">
-			Pinterest Board URL: <input type="text" name="firstname" size="100">
-		<input id="code" class="button" type="submit" value="Get Embed Code">
-		</form>
+		<%=form_tag urls_follow_path, remote: true, id: "pinteresturl" do %>
+			Pinterest Board URL: <input type="text" name="url" size="100">
+			<input id="code" class="button" type="submit" value="Get Embed Code">
+		<% end %>
 	</div>
 	<div id="step3">
 		<img id="number3" src="assets/step3.png">

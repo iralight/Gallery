@@ -87,10 +87,18 @@
 
 #number2{
 	position: absolute;
-	top: 250px;
-	left:150px;
+	top: 0px;
+	left:0px;
 	height: 200px;
 	width: 75px;
+}
+
+#step2{
+	position: absolute;
+	top: 250px;
+	left:150px;
+	height: 500px;
+	width: 100%;
 }
 
 
@@ -120,6 +128,19 @@ h1{
 	font-family: "Roboto Condensed", "Helvetica-NeueLight", Helvetica, Arial, sans-serif;
 	top: 200px;
 	position: absolute;
+}
+
+#embed_code{
+	display: block;
+	border-color: black;
+	background-color: #d3212b;
+	color: white;
+	position: relative;
+	top: 380px;
+	left: 250px;
+	width: 70%;
+	font-size: 12pt;
+	
 }
 
 p{
@@ -180,8 +201,8 @@ p{
 
 	width: 500px;
 	height: 25px;
-	top: 340px;
-	left: 250px;
+	top: 75px;
+	left: 100px;
 	position: absolute;
 }
 
@@ -205,6 +226,8 @@ p{
 	width: 1000px;
 
 }
+
+
 
 
 

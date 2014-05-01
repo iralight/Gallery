@@ -3,11 +3,13 @@
  require 'open-uri'
 
 class UrlsController < ApplicationController
-  def gallery
-    sample_pinboard = 'http://www.pinterest.com/iralight83/accessories/'
+  def gallery(url)
+    #puts url
+    #sample_pinboard = 'http://www.pinterest.com/iralight83/accessories/'
   	# get the url we are interested in
-  	uri = URI(sample_pinboard)
-  	@result = Net::HTTP.get(uri)
+  	#uri = URI(sample_pinboard)
+  	uri = URI(url)
+    @result = Net::HTTP.get(uri)
 
     #puts @result.inspect
 
@@ -31,7 +33,7 @@ class UrlsController < ApplicationController
   end
 
   def follow
-    @pins = gallery
+    @pins = gallery params[:url]
     respond_to do |format|
       format.js
     end

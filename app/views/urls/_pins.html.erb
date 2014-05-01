@@ -1,6 +1,13 @@
-<% @pins.each do |pin| %>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/lightbox2/2.51/css/lightbox.css">
+<script src="//cdn.jsdelivr.net/lightbox2/2.51/jquery-ui-1.8.18.custom.min.js"></script>
+<script src="//cdn.jsdelivr.net/lightbox2/2.51/jquery.smooth-scroll.min.js"></script>
+<script src="//cdn.jsdelivr.net/lightbox2/2.51/lightbox.js"></script>
+<% count = 0 %>
+<% @pins.each do |pin| 
+	count=count+1
+%>
 <div class="img">
- 	<a target="_self" id="1" href="<%=pin[:src]%>"><img src="<%=pin[:src]%>" alt="<%=pin[:alt]%>" width="110" height="90"></a>
+ 	<a target="_self" id="<%=count%>" href="<%=pin[:src]%>"><img src="<%=pin[:src]%>" alt="<%=pin[:alt]%>"></a>
  	<div class="desc">	<%=pin[:alt]%></div>
 </div>
 <% end %>

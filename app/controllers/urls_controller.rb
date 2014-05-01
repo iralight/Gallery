@@ -33,7 +33,10 @@ class UrlsController < ApplicationController
   end
 
   def follow
+    one_img_size = 150
     @pins = gallery params[:url]
+    @img_size = @pins.length * one_img_size
+    puts @img_size
     respond_to do |format|
       format.js
     end

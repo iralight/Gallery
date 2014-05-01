@@ -101,6 +101,12 @@
 	width: 100%;
 }
 
+#step3{
+	position:relative;
+	top: 10px;
+	left: 0px;
+	width: 100%;
+}
 
 #number3{
 	position: absolute;
@@ -226,23 +232,6 @@ p{
 	width: 1000px;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

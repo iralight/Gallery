@@ -1,7 +1,17 @@
 <html>
 <head>
 <%= stylesheet_link_tag "home" %>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+</script>
+<script> 
+$(document).ready(function(){
+  $("code").click(function(){
+    $("step3").animate({top:'500px'});
+  });
+});
+</script>
 <body>
+
 <div id = "header">
 	<div id = "rectangle">
 		<img id="logo" src="assets/logo.png">
@@ -18,20 +28,22 @@
 </div>
 <div class="steps">
  <h1 id="mainheading"> Welcome! Follow the steps below to generate an embed code for your Pinterest gallery! </h1>
+ 	
 	<div id="step1">
 		<img id="number1" src="assets/step1.png">
 		<div id="step1button" class="button">
-			<p> Create a Pinterest Board </p>
+			 <a href="http://www.pinterest.com/" target="_blank" id="pinlink"><p class="buttontext"> Create a Pinterest Board </p></a>
 		</div>
 			<p id="desc1"> If you already have a Pinterest board, skip to step 2! </p>
 	</div>
 	<div id="step2">
 		<img id="number2" src="assets/step2.png">
-		<form id="pinteresturl">
-			Pinterest Board URL: <input type="text" name="firstname" size="100">
-		<input id="code" class="button" type="submit" value="Get Embed Code">
-		</form>
+		<%=form_tag urls_follow_path, remote: true, id: "pinteresturl" do %>
+			Pinterest Board URL: <input type="text" name="url" size="100">
+			<input id="code" class="button" type="submit" value="Get Embed Code">
+		<% end %>
 	</div>
+<div contenteditable="true" id="embed_code" class="disabled" ></div>
 	<div id="step3">
 		<img id="number3" src="assets/step3.png">
 		<div id="account" class="button">

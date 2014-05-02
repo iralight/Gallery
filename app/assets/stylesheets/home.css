@@ -101,12 +101,6 @@
 	width: 100%;
 }
 
-#step3{
-	position:relative;
-	top: 10px;
-	left: 0px;
-	width: 100%;
-}
 
 #number3{
 	position: absolute;
@@ -114,6 +108,14 @@
 	left:150px;
 	height: 200px;
 	width: 75px;
+}
+
+#step3{
+	position: relative;
+	top: 10px;
+	left: 0px;
+	height: 500px;
+	width: 100%;
 }
 
 h1{
@@ -152,6 +154,7 @@ h1{
 p{
 	font-size: 12pt;
 }
+
 
 .button {
   background: #d3212b;
@@ -232,6 +235,33 @@ p{
 	width: 1000px;
 
 }
+
+#pinlink{
+	color: white;
+	font-family: "Roboto Condensed", "Helvetica-NeueLight", Helvetica, Arial, sans-serif;
+	text-decoration: none;
+}
+
+.disabled{
+	visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

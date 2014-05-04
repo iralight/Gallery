@@ -2,12 +2,13 @@
 <script src="//cdn.jsdelivr.net/lightbox2/2.51/jquery-ui-1.8.18.custom.min.js"></script>
 <script src="//cdn.jsdelivr.net/lightbox2/2.51/jquery.smooth-scroll.min.js"></script>
 <script src="//cdn.jsdelivr.net/lightbox2/2.51/lightbox.js"></script>
+
 <% count = 0 %>
 <% @pins.each do |pin| 
 	count=count+1
 %>
 <div class="img">
- 	<a target="_self" id="<%=count%>" href="<%=pin[:src]%>"><img src="<%=pin[:src]%>" alt="<%=pin[:alt]%>"></a>
+ 	<a id="<%=count%>" href="<%=pin[:src]%>"><img src="<%=pin[:src]%>" alt="<%=pin[:alt]%>" data-lightbox="gallery"></a>
  	<div class="desc">	<%=pin[:alt]%></div>
 </div>
 <% end %>

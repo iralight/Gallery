@@ -1,17 +1,14 @@
  require 'net/http'
  require 'nokogiri'
  require 'open-uri'
+ require 'get_url'
 
-class UrlsController < ApplicationController
+class UrlsController < ApplicationController 
   def gallery(url)
-    #puts url
-    #sample_pinboard = 'http://www.pinterest.com/iralight83/accessories/'
+    #GetUrl
   	# get the url we are interested in
-  	#uri = URI(sample_pinboard)
   	uri = URI(url)
     @result = Net::HTTP.get(uri)
-
-    #puts @result.inspect
 
   	# Get a Nokogiri::HTML::Document for the page we’re interested in...
 	  doc = Nokogiri::HTML(@result)

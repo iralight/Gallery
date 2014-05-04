@@ -1,6 +1,8 @@
 Example::Application.routes.draw do
   get "home/index"
   get "urls/gallery"
+  get "urls/test1"
+  get "urls/test2"
   post "urls/follow"
   get "users/index"
   root to: "home#index"

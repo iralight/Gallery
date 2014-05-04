@@ -4,6 +4,17 @@
  #require 'get_url'
 
 class UrlsController < ApplicationController 
+  def test1
+      url = "http://www.pinterest.com/iralight83/accessories/"
+      uri = URI(url)
+      @result = Net::HTTP.get(uri)
+  end
+
+  def test2
+    @result = test1
+    @doc = Nokogiri::HTML(@result)
+  end
+
   def gallery
   	# Get a Nokogiri::HTML::Document for the page we’re interested in...
 	  doc = Nokogiri::HTML(@result)
@@ -29,7 +40,7 @@ class UrlsController < ApplicationController
     begin 
       uri = URI(url)
       @result = Net::HTTP.get(uri)
-      puts "inside recursive"
+      puts "trying to get url " + url
     end while @result.length == 0
 
     return @result

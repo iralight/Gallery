@@ -1,3 +1,4 @@
+$("label").removeClass("disabled")
 $("#embed_code").removeClass("disabled")
-$("#embed_code").html('<%=render("pins", pins: @pins).gsub(/\n/, '')%>')
+$("#embed_code").html('<code><%=render("pins", pins: @pins).gsub(/\n/, '')%></code>')
 

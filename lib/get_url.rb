@@ -3,6 +3,6 @@ module GetUrl
 		sample_pinboard = 'http://www.pinterest.com/iralight83/accessories/'
   		uri = URI(sample_pinboard)
   		@result = Net::HTTP.get(uri)
-    	puts @result.inspect
+    	return @result
 	end
-end
+end 

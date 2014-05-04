@@ -1,15 +1,10 @@
  require 'net/http'
  require 'nokogiri'
  require 'open-uri'
- require 'get_url'
+ #require 'get_url'
 
 class UrlsController < ApplicationController 
-  def gallery(url)
-    #GetUrl
-  	# get the url we are interested in
-  	uri = URI(url)
-    @result = Net::HTTP.get(uri)
-
+  def gallery
   	# Get a Nokogiri::HTML::Document for the page we’re interested in...
 	  doc = Nokogiri::HTML(@result)
 
@@ -29,8 +24,21 @@ class UrlsController < ApplicationController
     @pins
   end
 
+  def recursive_url(url)
+    # keep getting the url until you get some results
+    begin 
+      uri = URI(url)
+      @result = Net::HTTP.get(uri)
+      puts "inside recursive"
+    end while @result.length == 0
+
+    return @result
+  end
+
   def follow
-    @pins = gallery params[:url]
+    #@result = GetUrl
+    @result = recursive_url params[:url]
+    @pins = gallery
     respond_to do |format|
       format.js
     end

@@ -14,4 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require google-code-prettify-rails/prettify

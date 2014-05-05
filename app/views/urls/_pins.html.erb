@@ -1,14 +1,25 @@
-<link rel="stylesheet" href="//cdn.jsdelivr.net/lightbox2/2.51/css/lightbox.css">
-<script src="//cdn.jsdelivr.net/lightbox2/2.51/jquery-ui-1.8.18.custom.min.js"></script>
-<script src="//cdn.jsdelivr.net/lightbox2/2.51/jquery.smooth-scroll.min.js"></script>
-<script src="//cdn.jsdelivr.net/lightbox2/2.51/lightbox.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.0.js"></script>
+<script src="https://cdn.jsdelivr.net/fancybox/2.1.4/jquery.fancybox.js"></script>
+<script src="https://cdn.jsdelivr.net/fancybox/2.1.4/jquery.fancybox.pack.js"></script>
+<script src="https://cdn.jsdelivr.net/fancybox/2.1.4/helpers/jquery.fancybox-buttons.js"></script>
+<script src="https://cdn.jsdelivr.net/fancybox/2.1.4/helpers/jquery.fancybox-media.js"></script>
+<script src="https://cdn.jsdelivr.net/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fancybox/2.1.4/jquery.fancybox.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fancybox/2.1.4/helpers/jquery.fancybox-buttons.css">
 
 <% count = 0 %>
 <% @pins.each do |pin| 
 	count=count+1
 %>
 <div class="img">
- 	<a id="<%=count%>" href="<%=pin[:src]%>"><img src="<%=pin[:src]%>" alt="<%=pin[:alt]%>" data-lightbox="gallery"></a>
- 	<div class="desc">	<%=pin[:alt]%></div>
+ 	<a class="fancybox" rel="group" id="<%=count%>" href="<%=pin[:src]%>"><img src="<%=pin[:src]%>" alt="<%=pin[:alt]%>" data-lightbox="gallery"></a>
+ 	<div class="desc"><%=pin[:alt]%></div>
 </div>
 <% end %>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>

@@ -10,5 +10,4 @@
  *=require home.css
  *= require_self
  *= require_tree .
- *= require google-code-prettify-rails/prettify
  */

@@ -39,7 +39,6 @@ group :doc do
 end
 
 gem 'nokogiri'
-gem 'google-code-prettify-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

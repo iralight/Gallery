@@ -13,6 +13,7 @@ class UrlsController < ApplicationController
   def test2
     @result = test1
     @doc = Nokogiri::HTML(@result)
+    @links = @doc.css('img[class^="pinImg"]')
   end
 
   def gallery

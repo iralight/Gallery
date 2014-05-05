@@ -36,6 +36,8 @@
 	vertical-align: text-middle;
 }
 
+
+
 .navigation:active {
   background: #ffffff;
   display: block;
@@ -54,6 +56,25 @@
 }
 
 .navigation:hover {
+	color: black;
+}
+
+.viewlink{
+	font-family: "Roboto Condensed", "Helvetica-NeueLight", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	text-align: center;
+	font-weight: bold;
+	line-height: 0px;
+	display: inline-block;
+	background-color: #FFFFFF;
+	color: #d3212b;
+	width: 100px;
+	height: 0px;
+	border-radius: 5px;
+	vertical-align: text-middle;
+}
+
+.viewlink:hover {
 	color: black;
 }
 
